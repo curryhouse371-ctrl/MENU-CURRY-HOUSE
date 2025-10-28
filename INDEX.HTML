@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curry House – Spécialités Indiennes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--orange:#ff7a00;--orange-600:#f97316;--orange-50:#fff7ed;--gray-900:#0f172a;--gray-700:#334155;--gray-500:#64748b;--gray-200:#e5e7eb}
+  *{box-sizing:border-box} html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--gray-900);background:#fff}
+  a{text-decoration:none;color:inherit} .container{max-width:1100px;margin:0 auto;padding:20px}
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--gray-200)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-logo{width:40px;height:40px;border-radius:12px;background:var(--orange);display:grid;place-items:center;color:#fff;font-weight:800;box-shadow:0 6px 16px rgba(249,115,22,.35)}
+  .pill{padding:8px 12px;border:1px solid var(--gray-200);border-radius:999px;font-size:14px;color:var(--gray-700);background:#fff}
+  .hero{background:#fff;padding:24px 0 8px;border-bottom:1px solid var(--gray-200)}
+  .title{font-size:28px;font-weight:800;letter-spacing:.2px}
+  .subtitle{color:var(--gray-700);margin-top:6px}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .badge{border:1px solid var(--orange);color:var(--orange-600);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;background:var(--orange-50)}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 16px;border-radius:14px;font-weight:700;border:1px solid var(--gray-200);box-shadow:0 6px 20px rgba(15,23,42,.06)}
+  .btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
+  .btn.whatsapp{background:#25D366;color:#fff;border-color:#1EBE5A}
+  .grid{display:grid;grid-template-columns:1fr;gap:14px;margin:20px 0 28px}
+  @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  .card{border:1px solid var(--gray-200);border-radius:18px;padding:14px 14px;background:#fff}
+  details{border:1px solid var(--gray-200);border-radius:18px;background:#fff;overflow:hidden}
+  summary{list-style:none;cursor:pointer;padding:14px 16px;background:var(--orange-50);display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--orange-600)}
+  summary::-webkit-details-marker{display:none}
+  .menu-items{padding:8px 12px 14px}
+  .menu-item{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:12px 6px;border-bottom:1px dashed var(--gray-200)}
+  .menu-item:last-child{border-bottom:none}
+  .menu-name{font-weight:600}
+  .menu-desc{font-size:14px;color:var(--gray-700);margin-top:4px}
+  .price{min-width:72px;text-align:right;font-weight:700}
+  .logos{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+  .logo{border:1px solid var(--gray-200);border-radius:10px;padding:8px 10px;font-weight:800;font-size:12px}
+  footer{border-top:1px solid var(--gray-200);padding:24px 0 40px;margin-top:20px}
+  .muted{color:var(--gray-500)}
+  .cta-fixed{position:fixed;bottom:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;pointer-events:none}
+  .cta-inner{display:flex;gap:10px;pointer-events:auto}
+</style>
+</head>
+<body>
+<header>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+    <div class="brand">
+      <div class="brand-logo">CH</div>
+      <div>
+        <div class="title" style="font-size:18px">Curry House</div>
+        <div class="muted" style="font-size:12px">Spécialités Indiennes • Montreuil</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="title">Curry House – Spécialités Indiennes</h1>
+    <p class="subtitle">Menu en ligne • Cuisine indienne authentique à Montreuil</p>
+    <div class="badges">
+      <span class="badge">Livraison gratuite dès 15€</span>
+      <span class="badge">À emporter</span>
+      <span class="badge">Halal</span>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="tel:+33763424110">📞 Commander maintenant</a>
+      <a class="btn whatsapp" href="https://wa.me/33763424110?text=Bonjour%20!%20Je%20voudrais%20passer%20une%20commande%20chez%20Curry%20House%20🍛" target="_blank" rel="noopener">💬 Commander par WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div id="menuRoot" class="grid"></div>
+
+  <div class="card"><strong>Commandez aussi sur :</strong>
+    <div class="logos"><span class="logo">Uber Eats</span><span class="logo">Just Eat</span><span class="logo">Deliveroo</span></div>
+  </div>
+
+  <footer>
+    <div style="display:grid;gap:6px">
+      <div><strong>Adresse :</strong> 72 Rue Beaumarchais, 93100 Montreuil</div>
+      <div><strong>Téléphone :</strong> 09 83 03 66 92 / 07 63 42 41 10</div>
+      <div><strong>Email :</strong> curryhouse371@gmail.com</div>
+      <div><strong>Horaires :</strong> 11h30–14h30 / 18h–22h30 — <em>Fermé le samedi</em></div>
+    </div>
+    <p class="muted" style="margin-top:10px">© <script>document.write(new Date().getFullYear())</script> Curry House. Tous droits réservés.</p>
+  </footer>
+</main>
+
+<div class="cta-fixed">
+  <div class="cta-inner">
+    <a class="btn primary" href="tel:+33763424110">📞 Appeler</a>
+    <a class="btn whatsapp" href="https://wa.me/33763424110?text=Bonjour%20!%20Je%20voudrais%20passer%20une%20commande%20chez%20Curry%20House%20🍛" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+</div>
+
+<script>
+const CATEGORIES = [
+  {id:'entrees',title:'Entrées',items:[
+    {name:'Samoussa légumes (2p)',desc:'Feuilletés croustillants aux légumes épicés',price:5.0},
+    {name:'Samoussa poulet (2p)',desc:'Feuilletés croustillants au poulet',price:5.5},
+    {name:'Pakora légumes',desc:'Beignets de légumes à la farine de pois chiches',price:4.5},
+    {name:'Onion Bhaji',desc:'Beignets d’oignons croustillants',price:4.5},
+    {name:'Poulet Tikka (entrée)',desc:'Morceaux de poulet marinés au yaourt et épices',price:6.9},
+  ]},
+  {id:'tandoori',title:'Tandoori & Grill',items:[
+    {name:'Poulet Tikka (plat)',desc:'Grillades au four tandoor, servi avec salade',price:12.5},
+    {name:'Poulet Tandoori 1/2',desc:'Poulet mariné aux épices, grillé',price:11.9},
+    {name:'Sheekh Kebab',desc:'Brochettes d’agneau haché aux herbes',price:12.9},
+    {name:'Paneer Tikka',desc:'Fromage indien grillé, poivrons & oignons',price:11.5},
+    {name:'Gambas Tandoori',desc:'Gambas marinées et grillées',price:16.9},
+  ]},
+  {id:'currys-poulet',title:'Currys – Poulet',items:[
+    {name:'Butter Chicken',desc:'Poulet sauce tomate, beurre & crème, très doux',price:12.9},
+    {name:'Poulet Tikka Masala',desc:'Sauce tomate épicée, onctueuse',price:12.9},
+    {name:'Poulet Korma',desc:'Crème, noix de cajou, amandes – doux',price:12.9},
+    {name:'Poulet Curry',desc:'Curry traditionnel, moyen',price:11.9},
+    {name:'Poulet Vindaloo',desc:'Très relevé, piment & vinaigre',price:12.5},
+  ]},
+  {id:'currys-agneau',title:'Currys – Agneau',items:[
+    {name:'Agneau Curry',desc:'Curry traditionnel, parfumé',price:13.5},
+    {name:'Agneau Rogan Josh',desc:'Tomate, oignons, épices du Cachemire',price:13.9},
+    {name:'Agneau Korma',desc:'Douceur crème & fruits secs',price:13.9},
+    {name:'Agneau Palak',desc:'Épinards & épices',price:13.9},
+  ]},
+  {id:'vegetariens',title:'Végétariens',items:[
+    {name:'Paneer Tikka Masala',desc:'Fromage indien dans sauce masala',price:11.9},
+    {name:'Chana Masala',desc:'Curry de pois chiches',price:10.5},
+    {name:'Dal Tadka',desc:'Lentilles jaunes, ail & cumin',price:9.9},
+    {name:'Aloo Gobi',desc:'Chou-fleur & pommes de terre',price:10.5},
+    {name:'Palak Paneer',desc:'Épinards & paneer',price:11.9},
+  ]},
+  {id:'biryanis',title:'Biryanis',items:[
+    {name:'Biryani Poulet',desc:'Riz basmati parfumé, safran & épices',price:12.9},
+    {name:'Biryani Agneau',desc:'Riz basmati parfumé, safran & épices',price:13.9},
+    {name:'Biryani Légumes',desc:'Riz basmati parfumé, safran & légumes',price:11.9},
+    {name:'Biryani Crevettes',desc:'Riz basmati parfumé, crevettes',price:14.9},
+  ]},
+  {id:'accompagnements',title:'Pains & Accompagnements',items:[
+    {name:'Naan nature',desc:'Pain au four tandoor',price:2.5},
+    {name:'Naan fromage',desc:'Pain fourré au fromage',price:3.5},
+    {name:'Naan ail & coriandre',desc:'Pain parfumé à l’ail',price:3.2},
+    {name:'Riz basmati',desc:'Bol de riz basmati',price:3.0},
+    {name:'Raita',desc:'Yaourt au concombre & cumin',price:3.0},
+  ]},
+  {id:'desserts',title:'Desserts',items:[
+    {name:'Gulab Jamun (2p)',desc:'Boules de lait dans sirop parfumé',price:4.0},
+    {name:'Kheer',desc:'Riz au lait cardamome & pistache',price:4.0},
+    {name:'Kulfi mangue/pistache',desc:'Glace indienne maison',price:4.5},
+  ]},
+  {id:'boissons',title:'Boissons',items:[
+    {name:'Lassi mangue / nature',desc:'Boisson yaourt sucrée',price:3.5},
+    {name:'Sodas 33cl',desc:'Coca, Fanta, Sprite…',price:2.5},
+    {name:'Eau minérale 50cl',desc:'Plate ou gazeuse',price:2.0},
+    {name:'Thé Masala',desc:'Thé indien aux épices',price:2.5},
+  ]},
+];
+
+// Rendu du menu
+const root = document.getElementById('menuRoot');
+CATEGORIES.forEach(c=>{
+  const det = document.createElement('details'); det.open = true; det.id = c.id;
+  const sum = document.createElement('summary'); sum.innerHTML = `<span>${c.title}</span><span>–</span>`;
+  const wrap = document.createElement('div'); wrap.className='menu-items';
+  c.items.forEach(it=>{
+    const row = document.createElement('div'); row.className='menu-item';
+    row.innerHTML = `
+      <div>
+        <div class="menu-name">${it.name}</div>
+        ${it.desc ? `<div class="menu-desc">${it.desc}</div>` : ''}
+      </div>
+      <div class="price">${Number(it.price).toFixed(2).replace('.', ',')}€</div>
+    `;
+    wrap.appendChild(row);
+  });
+  det.appendChild(sum); det.appendChild(wrap); root.appendChild(det);
+});
+</script>
+</body>
+</html>
